@@ -1,0 +1,63 @@
+body{
+  margin:0;
+  height: 90vh;
+  background-image: linear-gradient(to right, #ac5384 0, #e265ed 100%);
+}
+.Home__buttonContainer {
+  width: 100%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  width: 100px;
+  text-align: center;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.Home__modalButton {
+  transition: background .2s;
+  border: 2px solid rgb(179, 179, 179);
+}
+.Home__modalButton:hover {
+  background: rgb(179, 179, 179);
+}
+.Home__modalClose
+{
+  border: 2px solid red;
+  transition: background .2s;
+}
+.Home__modalClose:hover
+{
+  background:red;
+}
+.visible {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 20%;
+  min-width: 200px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all .5s;
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4);
+}
+.visible:target {
+  visibility: visible;
+  opacity: 1;
+}
